@@ -1,0 +1,120 @@
+<head>
+  <meta charset="UTF-8">
+  <title>my works - yagoonek.neocities.org</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    #player {
+      margin-top: 20px;
+      background: linear-gradient(to bottom, #e9f1fb, #c6d6ef);
+      border: 1px solid #8aa2c9;
+      padding: 12px;
+      width: 320px;
+      font-size: 13px;
+    }
+
+    #player-title {
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    #controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    #controls button {
+      padding: 4px 10px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    #tracklist li {
+      cursor: pointer;
+      color: #0f2a55;
+    }
+
+    #tracklist li:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+
+    <div id="header">
+      <h1>yagoonek</h1>
+    </div>
+
+    <nav id="navbar">
+      <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="myworks.html"><u>my works</u></a></li>
+      </ul>
+    </nav>
+
+    <div id="flex">
+      <aside>
+        <h2>updates</h2>
+        <ul>
+          <li>8.02.2026 – added my works page</li>
+          <li>8.02.2026 – music player</li>
+        </ul>
+      </aside>
+
+      <main>
+        <h2>my music</h2>
+        <p>my personal music projects and experiments.</p>
+
+        <h3>tracks</h3>
+        <ul id="tracklist">
+          <li onclick="playTrack('https://yagoonek.nekoweb.org/neocitiesfilehost/myworks-future.mp3', 'Future')">Future</li>
+          <li>Waterfall (i will add it soon)</li>
+        </ul>
+
+        <div id="player">
+          <div id="player-title">not playing</div>
+
+          <div id="controls">
+            <button onclick="togglePlay()">play / pause</button>
+            <audio id="audio"></audio>
+          </div>
+        </div>
+
+        <p>its on spotify but you can download it from here:</p>
+        <p><a href="https://yagoonek.nekoweb.org/neocitiesfilehost/myworks-future.mp3" download>future</a></p>
+        <p><a href="https://yagoonek.nekoweb.org/neocitiesfilehost/myworks-waterfall.mp3" download>waterfall (not yet)</a></p> 
+      </main>
+    </div>
+
+    <footer>
+      2021 – 2026 yagoonek
+    </footer>
+
+  </div>
+
+  <script>
+    const audio = document.getElementById("audio");
+    const title = document.getElementById("player-title");
+
+    function playTrack(file, name) {
+      if (audio.src.indexOf(file) === -1) {
+        audio.src = file;
+      }
+      title.textContent = "now playing: " + name;
+      audio.play();
+    }
+
+    function togglePlay() {
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+  </script>
+</body>
+</html>
