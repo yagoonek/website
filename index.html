@@ -7,16 +7,24 @@
 
   <link rel="stylesheet" href="http://yagoonek.xyz/xp.css">
 
-  <style>
-    body {
-      background-image: url('https://wparena.com/wp-content/uploads/2009/09/img0.jpg');
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: cover;
-      margin: 0;
-      font-family: sans-serif;
-    }
-  </style>
+<style>
+  body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    font-family: sans-serif;
+  }
+</style>
+
+<script>
+  const hour = new Date().getHours();
+  const isDay = hour >= 6 && hour < 18; 
+
+  const bg = isDay ? 'https://yagoonek.xyz/day.jpg' : 'https://yagoonek.xyz/night.jpg';
+
+  document.body.style.backgroundImage = `url('${bg}')`;
+</script>
 </head>
 
 <div class="window" style="width: 430px; position: fixed; top: 100px; right: 100px;">
