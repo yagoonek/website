@@ -20,6 +20,7 @@ body {
   color: #c9c9c9;
   background-color: #191a1f; 
   padding: 13px;
+  
 }
 
 
@@ -276,7 +277,7 @@ label, legend, fieldset {
 
 .falling-star:nth-child(4) {
   animation-duration: 8s;
-  animation-delay: 3s;
+  animation-delay: 2s;
 }
 
 .falling-star:nth-child(5) {
@@ -296,3 +297,5 @@ label, legend, fieldset {
   }
 }
   
+
+
