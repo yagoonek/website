@@ -21,7 +21,6 @@ body {
   background-color: #191a1f; 
   padding: 13px;
   
-}
 
 
 @media (max-width: 684px) {
@@ -299,3 +298,15 @@ label, legend, fieldset {
   
 
 
+}
+
+.rainbow {
+    animation: rainbow 3s linear infinite;
+    font-weight: bold;
+}
+
+@keyframes rainbow {
+    0%   { color: #0858eb; } 
+    50%  { color: #ff7f00; } 
+    100% { color: #0858eb; }
+}
